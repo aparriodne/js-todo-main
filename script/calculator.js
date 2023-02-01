@@ -1,33 +1,36 @@
 
+
 function calculator(){
-let op = prompt("Select an operation: +, -, *, /");
+let num1 = Number(prompt("Seclect number and press ok"));
+let num2 = Number(prompt("Seclect number and press ok"));
+let op = prompt("Select an operation:( +, -, *, / ) then press ok.");
+sum(num1,num2)
+sub(num1,num2)
+mult(num1,num2)
+div(num1,num2)
 switch (op){
-    case '+' : sum();
+    case '+' : sum(a,b);
     break;
-    case '-' : sub();
+    case '-' : sub(a,b);
     break;
-    case '*' : mult();
+    case '*' : mult(a,b);
     break;
-    case '/' : div();
+    case '/' : div(a,b);
     break;
-
+    
 };
 };
 
-function sum(){
+function sum(a,b){
     console.log("Calculator");
-    let num1 = Number(prompt("enter value"));
-    let num2 = Number(prompt("enter value"));
     let product = num1+num2
     
     document.getElementById("answer").innerHTML=`
     <p>${num1} + ${num2} = ${product}</p>
     `
 };
-function sub(){
+function sub(a,b){
     console.log("Calculator");
-    let num1 = Number(prompt("enter value"));
-    let num2 = Number(prompt("enter value"));
     let product = num1-num2
     
     document.getElementById("answer").innerHTML=`
@@ -35,10 +38,8 @@ function sub(){
 
     `
 };
-function mult(){
+function mult(a,b){
     console.log("Calculator");
-    let num1 = Number(prompt("enter value"));
-    let num2 = Number(prompt("enter value"));
     let product = num1*num2
     
     document.getElementById("answer").innerHTML=`
@@ -46,10 +47,8 @@ function mult(){
 
     `
 };
-function div(){
+function div(a,b){
     console.log("Calculator");
-    let num1 = Number(prompt("enter value"));
-    let num2 = Number(prompt("enter value"));
     let product = num1/num2
     
     document.getElementById("answer").innerHTML=`
